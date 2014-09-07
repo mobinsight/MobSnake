@@ -1,0 +1,137 @@
+<com.mobinsight.snake.utils.VerticalScrollview 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">         
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:context=".MainActivity" >
+        
+            <TextView
+                android:id="@+id/survey_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="4dp"    
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        
+            <TextView
+                android:id="@+id/border1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:background="#c0c0c0" />
+            
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"          
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"        
+                android:layout_marginTop="5dp"        
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/surveyimage" />    
+            
+            <EditText
+                android:id="@+id/answerText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"    
+                android:padding="5dp"                     
+                android:visibility="gone"
+                android:background="@drawable/textborder"        
+                android:textColor="#000000"  
+                android:textAppearance="?android:attr/textAppearanceMedium"              
+                android:hint="type your answer" >
+        
+                <requestFocus />
+            </EditText>
+        
+            <ListView
+                android:id="@+id/answerChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:divider="#77000000"
+                android:dividerHeight="3dp"        
+                android:background="@drawable/border"                                    
+                android:visibility="gone" />
+        
+            <TextView
+                android:id="@+id/seekbarPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"                
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"                
+                android:visibility="gone" />
+                
+            <SeekBar
+                android:id="@+id/answerRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"        
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"           
+                android:visibility="gone" />
+        
+            <RelativeLayout
+                android:id="@+id/seekbarLegend"        
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal" >
+                
+                <TextView
+                    android:id="@+id/seekbarMin"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"        
+                    android:visibility="gone" />
+            
+                <TextView
+                    android:id="@+id/seekbarMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    android:textColor="#ffffff"                    
+                    android:visibility="gone" />
+                
+            </RelativeLayout>
+            
+            <Button
+                android:id="@+id/answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:text="@string/answerButton" />
+        
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+        
+        </LinearLayout>
+</com.mobinsight.snake.utils.VerticalScrollview>        
